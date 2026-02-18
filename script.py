@@ -1,14 +1,14 @@
-class Person:
-    def __init__(self,name,age):
-        self.name = name
-        self.age = age
+class User:
+    def __init__(self,username, email, password):
+        self.username = username
+        self.email = email
+        self.password = password
+    def say_hi_to_user(self,user):
+        print(f"Sending message to {user.username}:\n Hi {user.username}, \n it's {self.username}")
 
-    def greet(self):
-        print(f"Hello my name is {self.name} and my age is {self.age}")
+user1 = User("Suyash", "yash@123mail.com", "123mail.com")
+user2 = User("yash", "yash@1234mail.com", "1234mail.com")
 
+user1.say_hi_to_user(user2)
 
-person1 = Person("Suyash",30)
-person1.greet()
-
-person2 = Person("Suyash2",30)
-person2.greet()
+print(user1.email) #yash@123mail.com
