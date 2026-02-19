@@ -3,8 +3,7 @@ class User:
         self.username = username
         self.email = email
         self.password = password
-    def say_hi_to_user(self,user):
-        print(f"Sending message to {user.username}:\n Hi {user.username}, \n it's {self.username}")
+
 
 user1 = User("Suyash", "yash@123mail.com", "123mail.com")
 user2 = User("yash", "yash@1234mail.com", "1234mail.com")
