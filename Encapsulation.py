@@ -19,4 +19,5 @@ class BankAccount:
 acc = BankAccount()
 print(acc.name)
 print(acc._balance)
-#print(acc.__pin) #error
+#print(acc.__pin) #Attributeerror
+acc.set_pin(1234,5678)
