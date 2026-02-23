@@ -11,6 +11,6 @@
 #
 # Now write it in ONE line using list comprehension:
 
-result = [? for ? in ?]     # Fill in the ?
+result = [i*i for i in range(1,6)]     # Fill in the ?
 print(result)
 # Expected output: [1, 4, 9, 16, 25]
