@@ -9,9 +9,8 @@
 
 class Car:  # 🏷️ CLASS: blueprint/template
     def __init__(self, brand):  # 🏷️ __init__: constructor — runs when object is created
-        self.brand = (
-            brand  # 🏷️ self.brand: instance attribute — data stored in the object
-        )
+        self.brand =brand  # 🏷️ self.brand: instance attribute — data stored in the object
+        
         # 🏷️ self: refers to the CURRENT object being created
 
     def drive(self):  # 🏷️ METHOD: a function inside a class
