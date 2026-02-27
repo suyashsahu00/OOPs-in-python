@@ -24,3 +24,44 @@
 # =============================================
 
 # Write your code below 👇
+
+
+class Account:
+    def __init__(self):  # no parameter, balance starts at 0
+        self.__balance = 0
+
+    def deposit(self, amount):  # not "deposite"!
+        if amount > 0:
+            self.__balance += amount
+            print(f"Deposited Rs.{amount} ✅")  # amount = parameter
+
+    def withdraw(self, amount):
+        if amount < self.__balance:
+            self.__balance -= amount
+            print(f"Withdrawn Rs.{amount} ✅")  # amount, not self.amount!
+        else:
+            print("Insufficient balance! ❌")
+
+    def get_balance(self):
+        return self.__balance  # return the value, not a formatted string
+
+
+class SavingsAccount(Account):  # CHILD inherits from Account!
+    def __init__(self, interest_rate):
+        super().__init__()  # call parent constructor
+        self.interest_rate = interest_rate
+
+    def add_interest(self):
+        interest = self.get_balance() * self.interest_rate / 100  # use getter!
+        self.deposit(interest)  # reuse parent's deposit method!
+        print(f"Interest added at {self.interest_rate}% ✅")
+
+
+sa = SavingsAccount(10)  # 10% interest rate
+sa.deposit(1000)
+sa.deposit(500)
+sa.withdraw(300)
+sa.withdraw(5000)  # should fail!
+print(f"Balance: Rs.{sa.get_balance()}")
+sa.add_interest()
+print(f"Balance after interest: Rs.{sa.get_balance()}")
