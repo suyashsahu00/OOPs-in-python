@@ -15,24 +15,26 @@
 # Balance: Rs.800
 # =============================================
 
+
 # Write your code below 👇
 class Wallet:
-    def __init__(self, balance):
-        self.__balance = balance
+    def __init__(self):
         self.__balance = 0
-    def add_money(self,amount):
+
+    def add_money(self, amount):
         if amount > 0:
             self.__balance += amount
-            print(f"Added Rs.{self.__balance}")
+            print(f"Added Rs.{amount} ✅")
         else:
-            print("Invalid amount!")
+            print("Invalid amount! ❌")
+
     def check_balance(self):
         return self.__balance
 
-acc = Wallet(1000)
+
+acc = Wallet()
 acc.add_money(500)
 acc.add_money(300)
 acc.add_money(-1)
 print(f"Balance: Rs.{acc.check_balance()}")
 # acc.check_balance()
-
