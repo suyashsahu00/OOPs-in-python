@@ -44,3 +44,4 @@ s = Student("Suyash", 30)
 print(f"{s.name}: {s.is_pass()}")
 s.update_marks(75)
 print(f"{s.name}: {s.is_pass()}")
+
