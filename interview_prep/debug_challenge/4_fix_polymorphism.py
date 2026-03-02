@@ -10,12 +10,12 @@
 
 
 class Cat:
-    def speak():
+    def speak(self):
         print("Meow! 🐱")
 
 
 class Dog:
-    def bark(self):
+    def speak(self):
         print("Woof! 🐕")
 
 
@@ -25,5 +25,5 @@ class Snake:
 
 
 animals = [Cat(), Dog(), Snake()]
-for self in animals:
-    self.speak()
+for x in animals:
+    x.speak()
