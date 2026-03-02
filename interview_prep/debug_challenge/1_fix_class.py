@@ -9,21 +9,21 @@
 # =============================================
 
 
-class car:
+class Car:
     total_cars = 0
 
-    def _init_(self, brand, model, price):
+    def __init__(self, brand, model, price):
         self.brand = brand
         self.model = model
         self.price = price
-        car.total_cars += 1
+        Car.total_cars += 1
 
-    def show():
+    def show(self):
         print(f"{self.brand} {self.model} - Rs.{self.price}")
 
 
-c1 = car("Toyota", "Camry", 1500000)
-c2 = car("Honda", "City", 1200000)
+c1 = Car("Toyota", "Camry", 1500000)
+c2 = Car("Honda", "City", 1200000)
 c1.show()
 c2.show()
-print(f"Total cars created: {total_cars}")
+print(f"Total cars created: {Car.total_cars}")
