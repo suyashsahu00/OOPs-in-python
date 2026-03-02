@@ -11,18 +11,18 @@
 
 
 class BankAccount:
-    def __init__(self, balance):
-        self.balance = 0
+    def __init__(self, balance=0):
+        self.__balance = balance
 
     def deposit(self, amount):
         if amount > 0:
-            self.balance += self.amount
-            print(f"Deposited Rs.{self.amount} ✅")
+            self.__balance+=amount
+            print(f"Deposited Rs.{amount} ✅")
         else:
             print("Invalid amount! ❌")
 
-    def get_balance():
-        return self.balance
+    def get_balance(self):
+        return self.__balance
 
 
 acc = BankAccount()

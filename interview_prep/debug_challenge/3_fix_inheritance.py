@@ -23,7 +23,7 @@ class Employee:
 
 class Manager(Employee):
     def __init__(self, name, salary, department):
-        super().__init__(name, salary, department)
+        super().__init__(name, salary)
         self.department = department
 
     def show(self):
@@ -35,4 +35,4 @@ class Manager(Employee):
 e = Employee("Suyash", 50000)
 m = Manager("Rahul", 80000, "Engineering")
 e.show()
-m.show
+m.show()
