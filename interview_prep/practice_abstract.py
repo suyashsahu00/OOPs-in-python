@@ -23,3 +23,20 @@
 # c = CelsiusToFahrenheit()
 # print(f"10 km = {k.convert(10)} miles")
 # print(f"100°C = {c.convert(100)}°F")
+
+from abc import ABC, abstractmethod
+class Converter(ABC):
+    @abstractmethod
+    def convert(self, value):
+        pass
+class kmToMiles(Converter):
+    def convert(self,value):
+        return value*0.621
+class CelsiusToFahrenheit(Converter):
+    def convert(self, value):
+        return (value * 9/5)+32
+
+k = kmToMiles()
+c = CelsiusToFahrenheit()
+print(f"10 km = {k.convert(10)} miles")
+print(f"100 C = {c.convert(100)} F")
